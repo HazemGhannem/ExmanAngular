@@ -1,0 +1,9 @@
+<p>home works!</p>
+<div *ngFor="let i of list">
+    {{i.id}}
+    {{i.name}}
+    {{i.price}}
+    {{i.Description}}
+    <button (click)="AddToCart(i)">Buy</button>
+    <button (click)="goToDetail(i.id)">Detail</button>
+</div>

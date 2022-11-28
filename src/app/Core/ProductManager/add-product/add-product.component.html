@@ -1,0 +1,17 @@
+<p>add-product works!</p>
+
+<form [formGroup]="formgroup">
+    <label >name</label>
+    <input type="text" formControlName="name">
+        <div *ngIf="test?.invalid && test?.touched">
+            Required 
+        </div>
+    <br>
+    <label >price</label>
+    <input type="text" formControlName="price">
+    <br>
+    <label >descrition</label>
+    <input type="text" formControlName="Description">
+    <br>
+    <button [disabled]="formgroup.invalid" (click)="addproduct(formgroup.value)">Add product</button>
+</form>
